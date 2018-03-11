@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>MvcApplication</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <description></description>
+    <display-name>OrganizaitonControllerServlet</display-name>
+    <servlet-name>OrganizaitonControllerServlet</servlet-name>
+    <servlet-class>com.practice.mvc.controller.OrganizaitonControllerServlet</servlet-class>
+    <init-param>
+            <description>
+                This parameter is read in the organizationcontrollerservlet and searched for org.properties file
+            </description>
+            <param-name>actions</param-name>
+            <param-value>org</param-value>
+    </init-param>
+    <init-param>
+        <param-name>development</param-name>
+        <param-value>true</param-value>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>OrganizaitonControllerServlet</servlet-name>
+    <url-pattern>/organization</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
